@@ -1,5 +1,4 @@
-<!-- Um formulário simples que utiliza o método POST e encaminha o usuário para o processa_cadastro. -->
-<!-- Os campos são definidos como required para que suas definições sejam obrigatórias, evitando envios vazios. -->
+
 <form action="processa_cadastro.php" method="post">
     <label for="nome"></label>
     <input type="text" name="nome" placeholder="Nome" required>
