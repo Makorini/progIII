@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Estudos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #003366;
+        }
+
+        header {
+            background-color: #005f99;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0077cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .hero {
+            background-color: #e6f2ff;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .sidebar, .sidebar-right {
+            background-color: #cce6ff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            float: left;
+            width: 25%;
+        }
+
+        .sidebar-right {
+            float: right;
+            width: 25%;
+        }
+
+        .stats-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .progress-bar {
+            background-color: #d0e7ff;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-inner {
+            background-color: #005f99;
+            height: 100%;
+        }
+
+        .conquistas {
+            padding-left: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #005f99;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        form input, form label, form textarea, form select, form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+            padding: 20px;
+            background-color: #005f99;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Aplicativo de Estudos</h1>
+    </header>
+
+    <nav>
+        <a href="#perfil">Perfil</a>
+        <a href="#login">Login</a>
+        <a href="#cadastro">Cadastro</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="#livro">Faça seu Livro</a>
+        <a href="#configuracoes">Configurações</a>
+    </nav>
+
+    <div class="sidebar">
+        <h3>O que desejamos fazer?</h3>
+        <ul>
+            <li>Rotina de estudos</li>
+            <li>Inserir questões próprias</li>
+            <li>Agrupar perguntas por área/curso</li>
+            <li>Organizar perguntas por proficiência</li>
+            <li>Gamificação e recompensa</li>
+            <li>Customização de personagem</li>
+        </ul>
+
+        <h3>Requisitos Não Funcionais</h3>
+        <ul>
+            <li>Agenda de estudos</li>
+            <li>Modo Pomodoro</li>
+            <li>Modo de foco</li>
+            <li>Sistema de feedback</li>
+            <li>Ranking e desafios</li>
+            <li>Estudo em grupo/dupla</li>
+        </ul>
+    </div>
+
+    <div class="sidebar-right">
+        <h3>Pontos</h3>
+        <div class="stats-box">
+            <p>Pontos: 1200</p>
+            <p>Conquistas: 5</p>
+            <p>Nível: 3</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: 75%;"></div>
+            </div>
+            <p>Progresso: 75%</p>
+        </div>
+        <h4>Conquistas</h4>
+        <ul class="conquistas">
+            <li>Iniciante: Complete 10 questões.</li>
+            <li>Intermediário: Estude por 5 dias consecutivos.</li>
+            <li>Avançado: Atinga 2000 pontos.</li>
+            <li>Mestre: Complete todos os módulos.</li>
+            <li>Conquistador: Compartilhe suas perguntas com 3 amigos.</li>
+        </ul>
+        <p>Continue a estudar para desbloquear novas conquistas e aumentar seu nível!</p>
+    </div>
+
+    <div class="container hero">
+        <h2>Comece agora a estudar de forma mais eficiente!</h2>
+        <p>Transforme sua rotina de estudos com nosso aplicativo interativo, superando os limites do aprendizado tradicional.</p>
+        <a href="#agenda" class="button">Comece agora!</a>
+    </div>
+
+    <div id="agenda" class="container">
+        <h2>Agenda</h2>
+        <p>Confira suas atividades definidas para hoje!</p>
+    </div>
+
+    <div id="modos-de-estudo" class="container">
+        <h2>Defina seu modo de estudo</h2>
+        <div class="log-box">
+            <p>Modo de foco</p>
+            <p>Método pomodoro</p>
+        </div>
+        <p>Definir um modo de estudo pode ser importante para uma boa rotina de estudos!</p>
+    </div>
+
+    <div id="livro" class="container">
+        <h2>Faça seu Livro</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome do Livro:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <label for="autor">Seu Nome (Autor):</label>
+            <input type="text" id="autor" name="autor" required>
+
+            <label for="tema">Tema Principal:</label>
+            <input type="text" id="tema" name="tema" required>
+
+            <label for="paginas">Número de Páginas Estimado:</label>
+            <input type="number" id="paginas" name="paginas" required>
+
+            <button type="submit" class="button">Cadastrar Livro</button>
+        </form>
+    </div>
+
+    <div id="arquitetura-mvc" class="container">
+        <h2>Arquitetura MVC</h2>
+        <p>O projeto foi desenvolvido utilizando a arquitetura MVC (Model-View-Controller) para separar responsabilidades:</p>
+        <ul>
+            <li><strong>Model:</strong> Responsável pela lógica de dados, incluindo o gerenciamento de usuários, perguntas e respostas.</li>
+            <li><strong>View:</strong> Interface gráfica que permite a interação do usuário com o sistema, construída com HTML, CSS e JavaScript.</li>
+            <li><strong>Controller:</strong> Intermediário que lida com as requisições do usuário, processa as regras de negócio e atualiza a View.</li>
+        </ul>
+    </div>
+
+    <div id="funcionamento" class="container">
+        <h2>Funcionamento da Aplicação</h2>
+        <p>O aplicativo permite que os usuários criem perguntas personalizadas e organizem suas rotinas de estudos. As funcionalidades principais incluem:</p>
+        <ul>
+            <li>Criação e edição de perguntas em formatos variados (múltipla escolha, dissertativas, etc.).</li>
+            <li>Gerenciamento de rotinas de estudo com sugestões baseadas em repetição espaçada.</li>
+            <li>Gamificação com recompensas para incentivar o progresso e a prática contínua.</li>
+            <li>Estudo em grupo, permitindo a colaboração e o compartilhamento de materiais.</li>
+            <li>Feedback contínuo para melhorar o desempenho ao longo do tempo.</li>
+        </ul>
+    </div>
+
+    <div id="codigo-fonte" class="container code-link">
+        <h2>Acesso aos Códigos Fonte</h2>
+        <p>O código-fonte completo do projeto está disponível no GitHub. Você pode acessar os repositórios através do link abaixo:</p>
+        <a href="https://github.com/seu-usuario/seu-projeto" class="button">Ver Código no GitHub</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Aplicativo de Estudos Interativo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
